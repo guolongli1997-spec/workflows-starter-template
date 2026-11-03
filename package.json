@@ -1,5 +1,5 @@
 {
-	"name": "workflows-starter-template",
+	"name": "workflows-starter",
 	"description": "Interactive starter template demonstrating Cloudflare Workflows with real-time status updates",
 	"cloudflare": {
 		"label": "Workflows Starter",
