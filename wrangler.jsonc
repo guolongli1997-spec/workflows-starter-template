@@ -12,42 +12,23 @@
 		"not_found_handling": "single-page-application"
 	},
 	"observability": {
-		"enabled": true
-	},
-	/**
-	 * Workflows
-	 * Define Workflows to orchestrate multi-step processes
-	 * https://developers.cloudflare.com/workflows/
-	 */
-	"workflows": [
-		{
-			"name": "my-workflow",
-			"binding": "MY_WORKFLOW",
-			"class_name": "MyWorkflow"
-		}
-	],
-	/**
-	 * Durable Objects
-	 * Used for WebSocket state management and real-time updates
-	 * https://developers.cloudflare.com/durable-objects/
-	 */
-	"durable_objects": {
-		"bindings": [
-			{
-				"name": "WORKFLOW_STATUS",
-				"class_name": "WorkflowStatusDO"
-			}
-		]
-	},
-	/**
-	 * Migrations
-	 * Required for Durable Objects
-	 */
-	"migrations": [
-		{
-			"tag": "v1",
-			"new_sqlite_classes": ["WorkflowStatusDO"]
-		}
-	],
-	"upload_source_maps": true
+    "enabled": true,
+    "head_sampling_rate": 1,
+    "redact_query_string": false,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "invocation_logs": true,
+      "persist": true
+    },
+    "traces": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true
+    },
+    "issue_detection": {
+      "enabled": false
+    }
+  },
+  // ...
 }
