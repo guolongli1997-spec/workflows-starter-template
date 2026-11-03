@@ -37,7 +37,7 @@ const WORKFLOW_CODE = `export class MyWorkflow extends WorkflowEntrypoint<Env> {
 // Simple syntax highlighting
 function highlightSyntax(line: string): JSX.Element {
 	// Comments take precedence
-	if (line.trim().startsWith("/*")) {
+	if (line.trim().startsWith("./dist")) {
 		return (
 			<span className="text-neutral-500 dark:text-neutral-400">{line}</span>
 		);
